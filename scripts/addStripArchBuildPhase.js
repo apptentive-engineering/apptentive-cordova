@@ -2,7 +2,7 @@
 
 const xcode = require('xcode'),
   fs = require('fs'),
-  path = require('path');
+  path = require('path');;
 
 module.exports = function(context) {
   const buildPhaseComment = 'Strip Unused Architectures';
