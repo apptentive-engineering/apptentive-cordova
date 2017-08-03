@@ -1,7 +1,7 @@
 Apptentive Cordova Changelog
 ============================
 
-This document lets you know what has changed in the Cordova plugin. For changes in each version of the native SDKs, please see:
+This  document lets you know what has changed in the Cordova plugin. For changes in each version of the native SDKs, please see:
 
 - [Android Changelog](https://github.com/apptentive/apptentive-android/blob/master/CHANGELOG.md)
 - [iOS Changelog](https://github.com/apptentive/apptentive-ios/blob/master/CHANGELOG.md)
