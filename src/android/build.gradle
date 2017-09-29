@@ -1,0 +1,5 @@
+repositories {
+    mavenCentral()
+    jcenter()
+    maven { url 'http://54.183.158.246:8081/artifactory/apptentive-snapshots' }
+}
