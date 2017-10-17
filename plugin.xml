@@ -39,9 +39,9 @@
             <meta-data android:name="apptentive_key" android:value="$ANDROID_APP_KEY"/>
             <meta-data android:name="apptentive_signature" android:value="$ANDROID_APP_SIGNATURE"/>
             <meta-data android:name="apptentive_sdk_distribution" android:value="Cordova"/>
-            <meta-data android:name="apptentive_sdk_distribution_version" android:value="4.0.1"/>
+            <meta-data android:name="apptentive_sdk_distribution_version" android:value="4.0.2"/>
         </config-file>
-        <framework src="com.apptentive:apptentive-android:4.0.1"/>
+        <framework src="com.apptentive:apptentive-android:4.0.2"/>
         <source-file src="src/android/ApptentiveBridge.java" target-dir="src/com/apptentive/cordova"/>
         <source-file src="src/android/JsonHelper.java" target-dir="src/com/apptentive/cordova"/>
     </platform>
@@ -72,7 +72,7 @@
         </config-file>
 
         <config-file target="*-Info.plist" parent="ApptentivePluginVersion">
-            <string>4.0.1</string>
+            <string>4.0.2</string>
         </config-file>
 
         <!-- ApptentiveBridge -->
