@@ -9,16 +9,6 @@
     NSString* messageNotificationCallback;
 }
 
- - (void)pluginInitialize {
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wundeclared-selector"
-     id<ApptentiveStyle> styleSheet = [Apptentive sharedConnection].styleSheet;
-     if ([styleSheet respondsToSelector:@selector(didBecomeActive:)]) {
-         [styleSheet performSelector:@selector(didBecomeActive:) withObject:nil];
-     }
-#pragma clang diagnostic pop
- }
-
 - (void)execute:(CDVInvokedUrlCommand*)command {
     NSString* callbackId = [command callbackId];
     if ([command arguments].count == 0) {
@@ -159,6 +149,12 @@
     configuration.distributionVersion = pluginVersion;
     
     [Apptentive registerWithConfiguration:configuration];
+
+    NSURL *styleSheetURL = [[NSBundle mainBundle] URLForResource:@"ApptentiveStyle" withExtension:@"plist"];
+    if (styleSheetURL) {
+        Apptentive.shared.styleSheet = [[ApptentiveStyleSheet alloc] initWithContentsOfURL:styleSheetURL];
+    }
+
     apptentiveInitted = YES;
 }
 
